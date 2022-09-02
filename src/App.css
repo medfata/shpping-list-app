@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+.App{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  height: 100%;
+  width: min-content;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  padding-right: 3px;
+}
+.menu{
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+}
+.activeButton{
+    border-left: 4px solid !important;
+    border-radius: revert !important;
+    border-left-color: #F9A109 !important;
+}
+.cart button{
+  border-radius: 50%;
+  position: relative;
+}
+.completedListCounter{
   color: white;
+  background-color: #EB5757;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: x-small;
+  width: 40%;
+  border-radius: 25%;
+  margin-top: -5px;
+  margin-right: 1px;
+}
+.body{
+  margin-left: 45px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  font-family: Quicksand;
+  padding-right: 45px;
 }
 
-.App-link {
-  color: #61dafb;
+.itemPicker{
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFE;
+  overflow: scroll;
+  padding-left: 10px;
+
+}
+.itemList{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.category{
+  height: 23px;
+  width: 175px;
+  font-family: Quicksand;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 8px;
+
+}
+.item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 140px !important;
+  min-height: 50px;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-top: 10px !important;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0em;
+
+}
+.item svg{
+  color: #C1C1C4;
+}
+.sideBar{
+  width:100%;
+  height: 100%;
+}
+.shippingList{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFF0DE;
+  opacity: 0.8;
+  padding-top: 20px;
+}
+.shippingList div{
+  background-color: black;
+  width: 90%;
+}
+.shippingListHeader{
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 25px;
+  font-size: small;
+}
+.shippingListHeader img{
+  width: 30%;
+  margin-top: -20px;
+  max-height: 130px;
+}
+.shippingListHeader div{
+  width: 60%;
+  height: 100%;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+.shippingListHeader button{
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  width: auto;
+  border: none;
+  width: 80%;
+  padding: 5px;
+}
+.shippingListFooter{
+  height: 60px;
+  background-color:white !important;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.shippingListFooter input{
+  border: none;
+}
+.shippingListFooter button{
+  border: none;
+  background-color: #F9A109;
+  color: white;
+  border-radius: 2px;
+}
+.shippingListName{
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  background-color: white !important;
+  border: 3px solid #F9A109;
+  width: min-content !important;
+  border-radius: 5px;
+}
+
+.addNewItem{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FAFAFE;
+}
+.addNewItem form{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  justify-content: space-around;
+}
+.addNewItem .buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.addNewItem button{
+    border: none;
+    color: gray;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid gray;
+}
+.addNewItem .save{
+  background-color: #F9A109;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
